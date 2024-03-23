@@ -24,8 +24,12 @@
   *note: Pada commit ke tiga ini, saya juga melakukan refaktorisasi, tetapi lupa saya commit pada Commit 3. Bukti refaktorisasi tersebut dapat dilihat pada Commit 4.
 
 </details>
+
 <details>
   <summary> Commit 4 Reflection Notes </summary>
+
+  Pada kode tersebut, dapat dilihat bahwa terdapat tiga kemungkinan request yang akan ditangani oleh program. Salah satunya adalah `/sleep`. Pada saat `/sleep` direques, web akan melambat. hal ini dapat dilihat sebagai simulasi dari web ketika harus menangani request yang lambat. Hal tersebut dapat terjadi karena request `/sleep` akan membuat thread yang ada terhenti (sleep) selama 10 detik. Karena program tersebut belum dirancang untuk multi-thread, ketika `/sleep` dipanggil, thread akan berhenti selama 10 detik dan tidak dapat menangani request lainnya.
+  
 </details>
 <details>
   <summary> Commit 5 Reflection Notes </summary>
