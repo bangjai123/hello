@@ -14,7 +14,15 @@
 <details>
   <summary> Commit 3 Reflection Notes </summary>
 
+  Splitting response dilakukan dengan menggunakan conditional (bisa if-else, maupun switch case). Sebelum refaktorisasi, hal ini dilakukan dengan membuat if-else yang masing-masing akan membaca request lalu memilih, response mana yang diberikan. Apa bila `"GET / HTTP/1.1"`, akan diberikan response `hello.html`. Apabila `"HTTP/1.1 404 NOT FOUND"`, akan diberikan response `404.html`. 
+
+  Setelah melihat kode tersebut, kita melihat adanya duplikasi terhadap proses pembacaan request dan pengiriman responsenya. Yang berbeda hanyalah file mana yang dirender. Agar memenuhi prinsip clean code dan menghindari duplikasi, kita hanya akan melakukan if else untuk memilih file yang akan dirender sebagai response. Selebihnya dijadikan satu kode saja. 
+
+
   ![Commit 3 screen capture](assets/images/Commit3.png)
+
+  *note: Pada commit ke tiga ini, saya juga melakukan refaktorisasi, tetapi lupa saya commit pada Commit 3. Bukti refaktorisasi tersebut dapat dilihat pada Commit 4.
+
 </details>
 <details>
   <summary> Commit 4 Reflection Notes </summary>
