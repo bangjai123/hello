@@ -29,8 +29,12 @@
   <summary> Commit 4 Reflection Notes </summary>
 
   Pada kode tersebut, dapat dilihat bahwa terdapat tiga kemungkinan request yang akan ditangani oleh program. Salah satunya adalah `/sleep`. Pada saat `/sleep` direques, web akan melambat. hal ini dapat dilihat sebagai simulasi dari web ketika harus menangani request yang lambat. Hal tersebut dapat terjadi karena request `/sleep` akan membuat thread yang ada terhenti (sleep) selama 10 detik. Karena program tersebut belum dirancang untuk multi-thread, ketika `/sleep` dipanggil, thread akan berhenti selama 10 detik dan tidak dapat menangani request lainnya.
-  
+
 </details>
+
 <details>
   <summary> Commit 5 Reflection Notes </summary>
+
+  Thread pool bekerja dengan cara menyediakan spawned threads yang menunggu perintah untuk dihandle. Ketika ada task baru yang muncul, thread yang masih tersedia akan menangani task Tersebut. Kita tidak perlu membuat sebuah thread baru untuk setiap task. Alih-alih melakukan hal tersebut, lebih baik memiliki jumlah thread yang finite, dan menampung task baru yang muncul dalam sebuah queue serta mem-popnya saat ada thread yang kosong. Jika kita memilih untuk membuat thread yang tidak terbatas, dikhawatirkan akan ada pengguna yang menggunakan semua resource di server kita saat membuat request terlalu banyak. 
+
 </details>
