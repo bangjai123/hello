@@ -8,6 +8,8 @@
 </details>
 <details>
   <summary> Commit 3 Reflection Notes </summary>
+
+  ![Commit 3 screen capture](assets/images/Commit3.png)
 </details>
 <details>
   <summary> Commit 4 Reflection Notes </summary>
